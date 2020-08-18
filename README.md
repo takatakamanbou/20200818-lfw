@@ -23,4 +23,4 @@ img2 = img[lty:lty+height, ltx:ltx+width, :]
 
 ![得られた画像の平均（学習用）](./meanL.png)
 
-ほげ
+
