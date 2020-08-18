@@ -12,3 +12,5 @@
 1. PNG画像として保存
 
 ![meanL.png](./meanL.png)
+
+![meanL_org.png](./meanL_org.png)
