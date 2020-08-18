@@ -11,6 +11,7 @@
 1. ランダムに 4000 枚を学習用に，残り 1721 枚をテスト用に
 1. PNG画像として保存
 
-![meanL.png](./meanL.png)
+![元画像の平均（学習用）](./meanL_org.png)
 
-![meanL_org.png](./meanL_org.png)
+![得られた画像の平均（学習用）](./meanL.png)
+
