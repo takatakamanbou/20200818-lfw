@@ -43,6 +43,7 @@ height = 128
 ltx = 76
 width = 96
 
+attrListL = []
 for i, idx in enumerate(indexL):
     name = attrList[idx]['person'].replace(' ', '_')
     fnSrc = 'data/lfw-deepfunneled/' + name + '/' + name + '_0001.jpg'
@@ -52,7 +53,16 @@ for i, idx in enumerate(indexL):
     img2 = img[lty:lty+height, ltx:ltx+width, :]
     fnDst = f'data/lfw-selected/L/img{i:04d}.png'
     cv2.imwrite(fnDst, img2)
+    attrListL.append(attrList[idx])
 
+hoge = {}
+hoge['attributes'] = attributes
+hoge['list'] = attrListL
+with open('data/lfw-selected/L/attributes.pickle', 'wb') as f:
+    pickle.dump(hoge, f)
+
+
+attrListT = []
 for i, idx in enumerate(indexT):
     name = attrList[idx]['person'].replace(' ', '_')
     fnSrc = 'data/lfw-deepfunneled/' + name + '/' + name + '_0001.jpg'
@@ -62,5 +72,22 @@ for i, idx in enumerate(indexT):
     img2 = img[lty:lty+height, ltx:ltx+width, :]
     fnDst = f'data/lfw-selected/T/img{i:04d}.png'
     cv2.imwrite(fnDst, img2)
+    attrListT.append(attrList[idx])
+
+hoge = {}
+hoge['attributes'] = attributes
+hoge['list'] = attrListT
+with open('data/lfw-selected/T/attributes.pickle', 'wb') as f:
+    pickle.dump(hoge, f)
+
 
 print(len(indexL), len(indexT))
+
+
+'''
+with open('data/lfw-selected/T/attributes.pickle', 'rb') as f:
+    rv = pickle.load(f)
+print(rv.keys())
+
+print(len(rv['attributes']), len(rv['list']))
+'''
