@@ -17,6 +17,7 @@ img2 = img[lty:lty+height, ltx:ltx+width, :]
 ```
 3. ランダムに 4000 枚を学習用に，残り 1721 枚をテスト用に
 1. PNG画像として保存
+1. 属性情報も pickle ファイルに保存
 
 ![元画像の平均（学習用）](./meanL_org.png)
 
